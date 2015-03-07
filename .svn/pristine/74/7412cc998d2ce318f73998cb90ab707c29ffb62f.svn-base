@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<head>
+    <title>丰富简历</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/templatemo_style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<style type="text/css">
+    body {
+        padding-top: 50px;
+    }
+    .starter-template {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+</style>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">NEUACM_刷题榜</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="login.php">后台登陆</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<body class="templatemo-bg-gray">
+<div class="container" style="min-width: 800px" >
+    <h1 class="margin-bottom-15"> ACM 榜单</h1>
+    <div class="col-md-7">
+
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

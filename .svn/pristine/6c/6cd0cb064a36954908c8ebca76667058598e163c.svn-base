@@ -1,0 +1,104 @@
+
+<?php
+include_once("header.php");
+?>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">NEUACM_刷题榜</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active" ><a href="index.php">Home</a></li>
+                <li ><a href="register.php">新增用户</a></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<body class="templatemo-bg-gray">
+<div class="container" style="margin:20px auto;" >
+    <h1 class="margin-bottom-15"> ACM 榜单</h1>
+    <div class="col-md-10">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>neuoj</th>
+                    <th>poj</th>
+                    <th>hdoj</th>
+                    <th>zoj</th>
+                    <th>uva</th>
+                    <th>codeforces</th>
+                    <th>topcoder</th>
+                    <th>bestcoder</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <?php
+                    include_once("SAE_DB.php");
+                    $db=new SAE_DB();
+                    $data = $db->select("user_solve_problem",array(),array());
+                    $num = count($data);
+                    for($i = 0; $i < $num; $i++){
+                        $arr = $data[$i];
+                        echo "<th>".$arr["school_num"]."</th>";
+                        echo "<th>".$arr["real_name"]."</th>";
+                        echo "<th>".$arr["neuoj"]."</th>";
+                        echo "<th>".$arr["poj"]."</th>";
+                        echo "<th>".$arr["hdoj"]."</th>";
+                        echo "<th>".$arr["zoj"]."</th>";
+                        echo "<th>".$arr["uva"]."</th>";
+                        echo "<th>".$arr["codeforces"]."</th>";
+                        echo "<th>".$arr["topcoder"]."</th>";
+                        echo "<th>".$arr["bestcoder"]."</th>";
+                    }
+                ?>
+                <tr>
+                    <th>20125117</th>
+                    <th>沈卓亨</th>
+                    <th>55</th>
+                    <th>12</th>
+                    <th>923</th>
+                    <th>12</th>
+                    <th>32</th>
+                    <th>1313</th>
+                    <th>232</th>
+                    <th>32</th>
+                </tr>
+                <tr>
+                    <th>20125117</th>
+                    <th>沈卓亨</th>
+                    <th>55</th>
+                    <th>12</th>
+                    <th>923</th>
+                    <th>12</th>
+                    <th>32</th>
+                    <th>1313</th>
+                    <th>232</th>
+                    <th>32</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<?php
+include_once("footer.php");
+?>

@@ -1,0 +1,95 @@
+<?php
+    if(!empty($_POST)){
+        echo "Do database!";
+        $mysql = new SaeMysql();
+        include_once("Mysql/SAE_DB.php");
+        $db = new \Mysql\SAE_DB();
+        print_r($_POST);
+    }
+?>
+<?php
+    include_once("header.php");
+?>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">NEUACM_刷题榜</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.php">Home</a></li>
+                <li class="active" ><a href="register.php">新增用户</a></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<body class="templatemo-bg-gray">
+<div class="container" style="margin:20px auto;" >
+    <h1 class="margin-bottom-15"> ACM 榜单</h1>
+    <div class="col-md-10">
+        <form class="form-horizontal templatemo-create-account templatemo-container" role="form" action="register.php" method="post">
+            <div class="form-inner">
+                <div class="form-group">
+                    <div class="col-md-7">
+                        <label for="school_num" >学号</label>
+                        <input type="text" class="form-control" id="school_num" name="school_num" placeholder="20125117">
+                    </div>
+                    <div class="col-md-7">
+                        <label for="real_name" class="control-label">姓名</label>
+                        <input type="text" class="form-control" id="real_name" name="real_name" placeholder="">
+                    </div>
+                    <div class="col-md-7">
+                        <label for="neuoj" class="control-label">neuoj_用户名</label>
+                        <input type="text" class="form-control" id="neuoj" name="neuoj" placeholder="">
+                    </div>
+                    <div class="col-md-7">
+                        <label for="poj" class="control-label">poj</label>
+                        <input type="text" class="form-control" id="poj" name="poj" placeholder="">
+                    </div>
+                    <div class="col-md-7">
+                        <label for="hdoj" class="control-label">hdoj</label>
+                        <input type="text" class="form-control" id="hdoj" name="hdoj" placeholder="">
+                    </div>
+                    <div class="col-md-7">
+                        <label for="zoj" class="control-label">zoj</label>
+                        <input type="text" class="form-control" id="zoj" name="zoj" placeholder="zoj填的时候，注意下，不是username,是user_id,需要先登录zoj,然后点Home下面的User Status,然后看链接 http://acm.zju.edu.cn/onlinejudge/showUserStatus.do?userId=71298 ,这个71298，就是这里需要填写的">
+                    </div>
+                    <div class="col-md-7">
+                        <label for="uva" class="control-label">uva</label>
+                        <input type="text" class="form-control" id="uva" name="uva" placeholder="">
+                    </div>
+                    <div class="col-md-7">
+                        <label for="codeforces" class="control-label">codeforces</label>
+                        <input type="text" class="form-control" id="codeforces" name="codeforces" placeholder="">
+                    </div>
+                    <div class="col-md-7">
+                        <label for="topcoder" class="control-label">topcoder</label>
+                        <input type="text" class="form-control" id="topcoder" name="topcoder" placeholder="">
+                    </div>
+                    <div class="col-md-7">
+                        <label for="bestcoder" class="control-label">学校名称</label>
+                        <input type="text" class="form-control" id="bestcoder" name="bestcoder" placeholder="">
+                    </div>
+                </div>
+                <hr class="featurette-divider">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="submit" value="添加用户" class="btn btn-info">
+                    </div>
+                </div>
+            </div>
+         </form>
+    </div>
+
+</div>
+<?php
+include_once("footer.php");
+?>
